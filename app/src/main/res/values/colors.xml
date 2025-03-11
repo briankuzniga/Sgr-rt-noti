@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Basic Colors -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Primary Theme Color (SGR Main) -->
+    <color name="primary">#004B87</color>  <!-- Dark Blue (Inspired by SGR branding) -->
+
+    <!-- Secondary Theme Color -->
+    <color name="secondary">#FFD700</color>  <!-- Gold (For highlights and CTA buttons) -->
+
+    <!-- Accent Color -->
+    <color name="accent">#FF5733</color>  <!-- Orange-Red (For warnings, alerts, and highlights) -->
+
+    <!-- Additional Colors -->
+    <color name="gray_light">#F5F5F5</color>
+    <color name="gray_dark">#6D6D6D</color>
+
+    <!-- Tertiary colors-->
+    <color name="tertiary">#FF6D00</color> <!-- Adjust color as needed -->
+
+</resources>

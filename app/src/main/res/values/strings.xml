@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">sgrApp</string>
+    <string name="welcome_to_real_time_notifications">Welcome to Real-Time Notifications!</string>
+    <string name="track_train_schedules_get_real_time_updates_and_more">Track train schedules, get real-time updates, and more!</string>
+    <string name="get_started">Get Started</string>
+    <string name="skip">Skip</string>
+    <string name="back">Back</string>
+    <string name="sign_up_now">Sign up now</string>
+    <string name="help_support"><![CDATA[Help & Support]]></string>
+    <string name="find_train">Find Train</string>
+    <string name="notifications">Notifications</string>
+    <string name="profile_icon">Profile Icon</string>
+    <string name="select_train">Select Train</string>
+    <string name="help_and_support_activity">Help and Support Activity</string>
+    <string name="help_and_support">Help and Support</string>
+    <string name="profile">Profile</string>
+    <string name="live_train_status">Live Train Status</string>
+</resources>

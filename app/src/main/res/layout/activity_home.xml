@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ActivityHome">
+
+    <!-- Blurred Glass-like Background -->
+    <ImageView
+        android:id="@+id/bgOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_blur"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <!-- Top Navigation Bar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/glass_background"
+        android:elevation="8dp"
+        android:padding="16dp"
+        app:title="🚆 Real-Time SGR Tracker"
+        app:titleTextColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/profileIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:contentDescription="@string/profile"
+            android:src="@drawable/ic_profile2"
+            android:tint="@android:color/white"
+            tools:ignore="UseAppTint,ImageContrastCheck"
+            tools:layout_editor_absoluteX="371dp"
+            tools:layout_editor_absoluteY="16dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Google Maps with Floating Info Card -->
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintTop_toBottomOf="@id/topAppBar"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <!-- Train Tracking Panel -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/trainTrackingPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="12dp"
+        android:background="@drawable/glass_background"
+        app:layout_constraintTop_toBottomOf="@id/mapView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/trainStatusTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/live_train_status"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+            <ProgressBar
+                android:id="@+id/trainProgressBar"
+                style="@android:style/Widget.Material.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progressTint="@color/primary" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Action Buttons Floating -->
+    <LinearLayout
+        android:id="@+id/quickActions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/trainTrackingPanel">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/findTrainButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary"
+            android:contentDescription="Find Train"
+            android:src="@drawable/ic_search"
+            tools:ignore="HardcodedText,ImageContrastCheck" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/notificationsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/secondary"
+            android:contentDescription="Notifications"
+            android:src="@drawable/ic_notifications"
+            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/helpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_help"
+            android:backgroundTint="@color/tertiary"
+            android:contentDescription="@string/help_and_support" />
+    </LinearLayout>
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/glass_background"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/bottom_navigation_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="VisualLintBottomNav" />
+</androidx.constraintlayout.widget.ConstraintLayout>

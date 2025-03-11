@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Home Icon -->
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        android:iconTint="@color/primary"/>
+
+    <!-- Search Icon -->
+    <item
+        android:id="@+id/nav_search"
+        android:icon="@drawable/ic_search"
+        android:title="Search"
+        android:iconTint="@color/primary"/>
+
+    <!-- Notifications Icon -->
+    <item
+        android:id="@+id/nav_notifications"
+        android:icon="@drawable/ic_notifications"
+        android:title="Notifications"
+        android:iconTint="@color/primary"/>
+
+    <!-- Profile Icon -->
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_profile2"
+        android:title="Profile"
+        android:iconTint="@color/primary"/>
+</menu>
